@@ -1,0 +1,13 @@
+<ul>
+  <li *ngFor="let item of list | done:true">
+    <input type="checkbox" [(ngModel)]="item.done">
+    <span class="item-description">{{item.description}}</span>
+  </li>
+</ul>
+
+<ul>
+  <li *ngFor="let item of list | done:false">
+    <input type="checkbox" [(ngModel)]="item.done">
+    <span class="item-description">{{item.description}}</span>
+  </li>
+</ul>
