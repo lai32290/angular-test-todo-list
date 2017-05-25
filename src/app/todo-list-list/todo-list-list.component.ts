@@ -9,10 +9,13 @@ import {TodoItem} from "../todo-item";
 })
 export class TodoListListComponent implements OnInit {
 
-  list: TodoItem[];
+  list: TodoItem[] = [];
 
   constructor(private todoService:TodoService) {
-    this.list = todoService.list;
+    todoService.list
+        .subscribe(i => {
+          this.list = i;
+        });
   }
 
   ngOnInit() {
