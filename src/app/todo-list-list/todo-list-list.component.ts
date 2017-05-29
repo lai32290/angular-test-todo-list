@@ -13,9 +13,13 @@ export class TodoListListComponent implements OnInit {
 
   constructor(private todoService:TodoService) {
     todoService.list
-        .subscribe(i => {
-          this.list = i;
+        .subscribe(list => {
+          this.list = list;
         });
+  }
+
+  checkDone(item) {
+    this.todoService.checkDone(item, !item.done);
   }
 
   ngOnInit() {

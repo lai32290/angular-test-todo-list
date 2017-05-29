@@ -1,13 +1,15 @@
+<p>Checked:</p>
 <ul>
-  <li *ngFor="let item of list | done:true">
-    <input type="checkbox" [(ngModel)]="item.done">
+  <li *ngFor="let item of list | done:true" (click)="checkDone(item)">
+    <input type="checkbox" [ngModel]="item.done"/>
     <span class="item-description">{{item.description}}</span>
   </li>
 </ul>
 
+<p>Unchecked:</p>
 <ul>
-  <li *ngFor="let item of list | done:false">
-    <input type="checkbox" [(ngModel)]="item.done">
+  <li *ngFor="let item of list | done:false" (click)="checkDone(item)">
+    <input type="checkbox" [ngModel]="item.done"/>
     <span class="item-description">{{item.description}}</span>
   </li>
 </ul>

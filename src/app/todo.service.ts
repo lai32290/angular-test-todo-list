@@ -22,9 +22,10 @@ export class TodoService {
     }
 
     checkDone(item:TodoItem, done:boolean = true) {
-        const items = this._list.getValue().filter(i => {
-            if(i === item)
-                return Object.assign({}, i, {done});
+        const items = this._list.getValue().map(i => {
+            if(i === item) {
+                return Object.assign({}, i, {done : done});
+            }
             return i;
         });
         this._list.next(items);

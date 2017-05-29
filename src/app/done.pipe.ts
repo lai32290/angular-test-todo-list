@@ -7,7 +7,6 @@ import {TodoItem} from "./todo-item";
 export class DonePipe implements PipeTransform {
 
   transform(items: TodoItem[], done: boolean = true): any {
-    console.log(arguments);
     return items.filter(i => i.done == done);
   }
 
