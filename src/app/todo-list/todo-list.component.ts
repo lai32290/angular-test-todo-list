@@ -9,6 +9,7 @@ import {TodoItem} from "../todo-item";
 })
 export class TodoListComponent implements OnInit {
 
+  searchText: string = "";
   list: TodoItem[] = [];
 
   constructor(private todoService:TodoService) {

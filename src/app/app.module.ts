@@ -9,6 +9,7 @@ import {TodoListFormComponent} from './todo-list-form/todo-list-form.component';
 import {TodoListListComponent} from './todo-list-list/todo-list-list.component';
 import { TodoService } from './todo.service';
 import { DonePipe } from './done.pipe';
+import { TodoListFilterComponent } from './todo-list-filter/todo-list-filter.component';
 
 @NgModule({
     declarations: [
@@ -17,6 +18,7 @@ import { DonePipe } from './done.pipe';
         TodoListFormComponent,
         TodoListListComponent,
         DonePipe,
+        TodoListFilterComponent,
     ],
     imports: [
         BrowserModule,
