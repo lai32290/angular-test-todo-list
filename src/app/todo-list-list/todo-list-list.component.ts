@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import {TodoService} from "../todo.service";
 import {TodoItem} from "../todo-item";
 
@@ -9,13 +9,10 @@ import {TodoItem} from "../todo-item";
 })
 export class TodoListListComponent implements OnInit {
 
+  @Input()
   list: TodoItem[] = [];
 
   constructor(private todoService:TodoService) {
-    todoService.list
-        .subscribe(list => {
-          this.list = list;
-        });
   }
 
   checkDone(item) {
