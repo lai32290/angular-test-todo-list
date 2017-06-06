@@ -1,4 +1,4 @@
 <h3>
   Filter:
-  <input type="text" [(ngModel)]="model">
+  <input type="text" [(ngModel)]="model" (ngModelChange)="modelChange.emit($event)">
 </h3>

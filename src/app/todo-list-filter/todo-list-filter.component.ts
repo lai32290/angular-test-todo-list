@@ -9,6 +9,9 @@ export class TodoListFilterComponent implements OnInit {
   @Input()
   public model: string;
 
+  @Output()
+  public modelChange = new EventEmitter();
+
   constructor() { }
 
   ngOnInit() {
