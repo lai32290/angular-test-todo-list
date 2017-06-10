@@ -11,6 +11,10 @@ import { TodoService } from './todo.service';
 import { DonePipe } from './done.pipe';
 import { TodoListFilterComponent } from './todo-list-filter/todo-list-filter.component';
 import { DescriptionFilterPipe } from './description-filter.pipe';
+import { TagInputComponent } from './tag-input/tag-input.component';
+import { TagListComponent } from './tag-list/tag-list.component';
+import { TagOptionsComponent } from './tag-options/tag-options.component';
+import { FilterByStringPipe } from './filter-by-string.pipe';
 
 @NgModule({
     declarations: [
@@ -21,6 +25,10 @@ import { DescriptionFilterPipe } from './description-filter.pipe';
         DonePipe,
         TodoListFilterComponent,
         DescriptionFilterPipe,
+        TagInputComponent,
+        TagListComponent,
+        TagOptionsComponent,
+        FilterByStringPipe,
     ],
     imports: [
         BrowserModule,
