@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TodoListFormComponent } from './todo-list-form.component';
+import { TodoListFilterComponent } from "../todo-list-filter/todo-list-filter.component";
 
 describe('TodoListFormComponent', () => {
   let component: TodoListFormComponent;
@@ -8,7 +9,10 @@ describe('TodoListFormComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ TodoListFormComponent ]
+      declarations: [
+          TodoListFormComponent,
+          TodoListFilterComponent
+      ]
     })
     .compileComponents();
   }));
