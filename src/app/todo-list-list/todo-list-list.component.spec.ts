@@ -43,6 +43,12 @@ describe('TodoListListComponent', () => {
         expect(el.textContent).toContain('World');
     });
 
+    it('should contains "No item in the list"', () => {
+        component.list = [];
+        fixture.detectChanges();
+        expect(el.textContent).toContain('No item in the list');
+    });
+
     it('should contain "Hello" and be done', () => {
         component.list = [
             new TodoItem('Hello', true),

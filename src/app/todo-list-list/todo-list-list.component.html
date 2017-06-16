@@ -3,4 +3,5 @@
     <input type="checkbox" [ngModel]="item.done"/>
     <span class="item-description">{{item.description}}</span>
   </li>
+  <li *ngIf="list.length == 0">-- No item in the list--</li>
 </ul>
