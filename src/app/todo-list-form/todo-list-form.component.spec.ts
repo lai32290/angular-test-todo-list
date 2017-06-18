@@ -4,7 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { TodoListFormComponent } from './todo-list-form.component';
 import { AppModule } from '../app.module';
 import { By } from '@angular/platform-browser';
-import { DebugElement } from "@angular/core/src/debug/debug_node";
+import { DebugElement } from "@angular/core";
 
 describe('TodoListFormComponent', () => {
     let component: TodoListFormComponent;
@@ -35,14 +35,24 @@ describe('TodoListFormComponent', () => {
         component.description = 'some description';
         fixture.detectChanges();
 
-        let el = de.query(By.css('input[name=description]'));
+        let el = de.query(By.css('input[name=description]')).nativeElement;
 
         fixture.whenStable()
             .then(() => {
-                expect(el.nativeElement.value).toBe('some description');
+                expect(el.value).toBe('some description');
             });
     });
 
+    it('form input should be empty after call add function', () => {
+        component.description = 'some description';
+        component.add();
+        fixture.detectChanges();
 
+        let el = de.query(By.css('input[name=description]')).nativeElement;
 
+        fixture.whenStable()
+            .then(() => {
+                expect(el.value).toBe('');
+            });
+    });
 });
