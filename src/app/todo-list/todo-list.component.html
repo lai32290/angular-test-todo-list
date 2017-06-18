@@ -1,4 +1,4 @@
-<div>
+<div class="todo-list">
   <div>
     <app-todo-list-filter [(model)]="searchText"></app-todo-list-filter>
   </div>
@@ -7,8 +7,8 @@
   </div>
   <div>
     <h2>Doing</h2>
-    <app-todo-list-list [list]="list | descriptionFilter:searchText | done:false"></app-todo-list-list>
+    <app-todo-list-list class="list-todo" [list]="list | descriptionFilter:searchText | done:false"></app-todo-list-list>
     <h2>Done</h2>
-    <app-todo-list-list [list]="list | descriptionFilter:searchText | done:true"></app-todo-list-list>
+    <app-todo-list-list class="list-done" [list]="list | descriptionFilter:searchText | done:true"></app-todo-list-list>
   </div>
 </div>

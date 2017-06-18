@@ -28,11 +28,6 @@ describe('TodoListListComponent', () => {
         el = de.nativeElement;
     });
 
-    it('should create', () => {
-        fixture.detectChanges();
-        expect(component).toBeTruthy();
-    });
-
     it('should contains "Hello" and "World" text', () => {
         component.list = [
             new TodoItem('Hello'),
