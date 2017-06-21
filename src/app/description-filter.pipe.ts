@@ -7,7 +7,7 @@ import { TodoItem } from "./todo-item";
 export class DescriptionFilterPipe implements PipeTransform {
 
   transform(items: TodoItem[], str: string): TodoItem[]{
-      return items.filter(item => item.description.includes(str));
+      return items.filter(item => item.description.toLowerCase().includes(str.toLowerCase()));
   }
 
 }
